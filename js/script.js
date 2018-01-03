@@ -19,12 +19,76 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 //GLOBAL VARIABLES
-
-
-
-//FUNCTIONS
-
-
-
+$( document ).ready(function() {
+        
+        var rock = "rock";
+        var paper = "paper";
+        var scissors = "scissors";
+        var myChoice = $("#input").val();
+      
+        
+        
+        //FUNCTIONS
+        
+        
+        
+        $("#submit").click(function() {
+        
+        var computerChoice = Math.random();
+        
+        if (computerChoice <= 0.34){
+                
+                computerChoice = rock;
+        }
+        else if(computerChoice <= 0.67){
+                        
+                computerChoice = paper;
+        }
+        else{
+                computerChoice = scissors;
+        }
+         console.log(computerChoice);
+        
+        
+        if(myChoice === computerChoice){
+                console.log("The results are tied");
+                $("#response").text("The results are tied")
+        }
+        
+        if (myChoice === rock && computerChoice === scissors){
+                console.log("You Win");
+                $("#response").text("You Win")
+        }
+        else{
+                console.log("Computer Wins");
+                $("#response").text("Computer Wins")
+        }
+        
+        if (myChoice === scissors && computerChoice === paper){
+                console.log("You Win");
+                $("#response").text("You Win")
+        }
+        else{
+                console.log("Computer Wins");
+                $("#response").text("Computer Wins")
+        }
+        
+        if (myChoice === paper && computerChoice === rock){
+                console.log("You Win");
+                $("#response").text("You Win")
+        }
+        else{
+                console.log("Computer Wins");
+                $("#response").text("Computer Wins")
+        }
+            
+        });
 // DOCUMENT READY FUNCTION
-
+// $("button").click(function(){
+    
+//     var inputUsername= $("#username").val();
+//     var inputPassword= $("#password").val();
+    
+//     
+// });  
+});
